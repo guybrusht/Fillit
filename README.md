@@ -1,2 +1,2 @@
 # Fillit
-Projet de groupe réalisé avec pmorrain
+Projet algorithmique réalisé avec pmorrain.
