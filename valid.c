@@ -6,12 +6,13 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 15:08:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/10 14:48:08 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/10 19:12:54 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "shapes.h"
+#include "fillit.h"
 
 int		ft_isvalid(char *ttris)
 {
@@ -21,10 +22,10 @@ int		ft_isvalid(char *ttris)
 
 	line = 1;
 	i = 0;
-	len = ft_strlen(desc);
+	len = ft_strlen(ttris);
 	while (i < len)
 	{
-		if (desc[i + 4] == '\n')
+		if (ttris[i + 4] == '\n')
 		{
 			line++;
 			i += 5;
@@ -40,42 +41,46 @@ int		ft_isvalid(char *ttris)
 	return (0);
 }
 
-int		ft_simplifytetrimino(int nb)
+int		ft_simplify_tmino(int nb)
 {
-	int		tmp;
-
 	while (!(nb & 15))
+	{
 		nb /= 2;
-	while (ft_noncontiguous(nb))
+	}
+	while (ft_is_noncontiguous(nb))
+	{
 		nb /= 2;
+	}
 	while (!(nb & 4369))
+	{
 		nb /= 2;
+	}
 	return (nb);
 }
 
-int		ft_noncontiguous(int nb)
+int		ft_is_noncontiguous(int nb)
 {
-	int	noncontiguous;
+	int	non_contiguous;
+	int	tmp;
 
-	noncontiguous = 0;
+	non_contiguous = 0;
 	tmp = nb >> 3;
 	while (tmp)
 	{
-	if (tmp & 3)
-		noncontiguous = 1;
+	if ((tmp & 3) == 3)
+		non_contiguous = 1;
 	tmp = tmp >> 4;
 	}
-	return (noncontiguous);
+	return (non_contiguous);
 }
 
 int		ft_istetrimino(int nb)
 {
 	int		s;
 	
-	s = ft_simplifytetrimino(nb);
-	
+	s = ft_simplify_tmino(nb);
 	if (s == SQUARE || s == HORI_LINE || s == VERT_LINE || s == T0 || s == T90
-			|| s == T180 || s == T270 || s == L0 || s == L90 || s == L180
+			|| s == T180 || s == T270 || s == L0 || s == L90 || s == L180
 			|| s == L270 || s == SYM_L0 || s == SYM_L90 || s == SYM_L180
 			|| s == SYM_L270 || s ==  S0 || s == S90 || s == Z0 || s == Z90)
 		return (1);

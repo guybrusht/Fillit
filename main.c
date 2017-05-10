@@ -6,14 +6,12 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 11:10:51 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/10 14:48:12 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/10 19:04:38 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "fillit.h"
-
-//creer fonction ft_error?
 
 int			main(int ac, char **av)
 {
@@ -25,12 +23,18 @@ int			main(int ac, char **av)
 		return (0);
 	}
 	ttris = ft_read_file(av[1]);
+	ft_putnbr(ft_istetrimino(ft_convert_to_nb(ttris)));
 //	if (!ft_isvalid(ttris))
 //	{
 //		ft_putendl("error");
 //		return (0);
 //	}
-	ft_analysis(ttris);
+//	else
+///	{
+//		ft_putendl("valid file");
+//		return (0);
+//	}
+//	ft_analysis(ttris);
 //	ft_solve(ttris);
 	return (0);
 }

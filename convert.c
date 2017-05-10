@@ -6,11 +6,11 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:13:56 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/10 18:26:11 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/10 18:57:31 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 #include "fillit.h"
 
 int			ft_convert_to_nb(char *ttris)
@@ -32,10 +32,10 @@ int			ft_convert_to_nb(char *ttris)
 		if (ttris[i] == '#')
 			nb++;
 		i++;
-	
+	}	
 	return (nb);
 }
-
+/*
 char		*ft_convert_to_str(int itminos)
 {
 	char	*tmino;
@@ -44,7 +44,7 @@ char		*ft_convert_to_str(int itminos)
 
 	i = 0;
 	j = 0;
-	if (!(tmino = (char*)malloc(sizeof(*tminos) * 21)))
+	if (!(tmino = (char*)malloc(sizeof(*itminos) * 21)))
 		return (NULL);
 	while ()
-}
+}*/
