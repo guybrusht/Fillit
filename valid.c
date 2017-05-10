@@ -38,3 +38,31 @@ int		ft_isvalid(char *ttris)
 		return (1);
 	return (0);
 }
+
+int		ft_istetrimino(int nb)
+{
+	int		tmp;
+
+	while (!(nb & 15))
+		nb /= 2;
+	while (ft_noncontiguous(nb))
+		nb /= 2;
+	while (!(nb & 4369))
+		nb /= 2;
+	return (nb);
+}
+
+int		ft_noncontiguous(int nb)
+{
+	int	noncontiguous;
+
+	noncontiguous = 0;
+	tmp = nb >> 3;
+	while (tmp)
+	{
+	if (tmp & 3)
+		noncontiguous = 1;
+	tmp = tmp >> 4;
+	}
+	return (noncontiguous);
+}
