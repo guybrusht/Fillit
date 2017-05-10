@@ -6,11 +6,14 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:13:56 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/04 18:36:06 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/10 18:26:11 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_convert_to_nb(char *tab)
+#include "libft.h"
+#include "fillit.h"
+
+int			ft_convert_to_nb(char *ttris)
 {
 	int		nb;
 	int		i;
@@ -19,16 +22,29 @@ int			ft_convert_to_nb(char *tab)
 	i = 0;
 	nb = 0;
 	j = 0;
-	while (tab[i] && j < 16)
+	while (ttris[i] && j < 16)
 	{
-		if (tab[i] != '\n')
+		if (ttris[i] != '\n')
 		{
 			nb *= 2;
 			j++;
 		}
-		if (tab[i] == '#')
+		if (ttris[i] == '#')
 			nb++;
 		i++;
-	}
+	
 	return (nb);
+}
+
+char		*ft_convert_to_str(int itminos)
+{
+	char	*tmino;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (!(tmino = (char*)malloc(sizeof(*tminos) * 21)))
+		return (NULL);
+	while ()
 }
