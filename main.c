@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/04 18:32:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/10 14:48:13 by alalaoui         ###   ########.fr       */
+/*   Created: 2017/05/05 11:10:51 by alalaoui          #+#    #+#             */
+/*   Updated: 2017/05/10 14:48:12 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILLIT_H
-# define FILLIT_H
-
 #include "libft/libft.h"
+#include "fillit.h"
 
-int			ft_convert_to_nb(char *tab);
-char		*ft_read_file(char *av);
-int			ft_analysis(char *ttris);
-int			ft_tetriminos_nb(char *ttris);
-int			ft_isvalid(char *ttris);
+//creer fonction ft_error?
 
-#endif
+int			main(int ac, char **av)
+{
+	char	*ttris;
+
+	if (ac != 2)
+	{
+		ft_putendl("usage : ./fillit source_file");
+		return (0);
+	}
+	ttris = ft_read_file(av[1]);
+//	if (!ft_isvalid(ttris))
+//	{
+//		ft_putendl("error");
+//		return (0);
+//	}
+	ft_analysis(ttris);
+//	ft_solve(ttris);
+	return (0);
+}
