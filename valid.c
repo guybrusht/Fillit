@@ -6,13 +6,13 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 15:08:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/09 17:34:27 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/10 14:48:08 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 
-int		ft_isvalid(char *desc)
+int		ft_isvalid(char *ttris)
 {
 	int	len;
 	int	i;

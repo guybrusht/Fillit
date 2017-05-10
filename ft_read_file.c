@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/09 16:54:49 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/09 18:18:08 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/10 12:23:59 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
 /*
 ** On prend un bufffer de 545 car il correspond au plus grand nb de
 ** tetriminos recu
+** declaration en static du buf car est free sinon (warning stack adress)
 */
 
 char		*ft_read_file(char *desc)
 {
 	int		ret;
 	int		fd;
-	char	buf[545];
+	static char	buf[545];
 
 	if ((fd = open(desc, O_RDONLY)) == -1)
 	{
@@ -32,6 +33,5 @@ char		*ft_read_file(char *desc)
 	}
 	ret = read(fd, buf, 545);
 	buf[ret] = '\0';
-	printf("%s\n", buf);
 	return (buf);
 }
