@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:32:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/10 18:50:31 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/11 17:01:00 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,14 @@
 
 #include "libft/libft.h"
 
-/*typedef struct s_list
-{
-	int				nb;
-	char			rank;
-	char			*tminos;
-	struct s_list	next;
-}			t_tris;*/
 int			ft_convert_to_nb(char *tab);
 char		*ft_read_file(char *av);
-int			ft_analysis(char *ttris);
 int			ft_tetriminos_nb(char *ttris);
 int			ft_isvalid(char *ttris);
 int			ft_simplify_tmino(int nb);
 int			ft_is_noncontiguous(int nb);
-int			ft_istetrimino(int nb);
+int			ft_is_tetrimino(int nb);
+char		**ft_split_tmino(char *ttris);
+int			ft_check_ttris(char *ttris);
 
 #endif
