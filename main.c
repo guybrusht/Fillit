@@ -15,6 +15,7 @@
 
 int			main(int ac, char **av)
 {
+	char	**ttristab;
 	char	*ttris;
 
 	if (ac != 2)
@@ -23,6 +24,7 @@ int			main(int ac, char **av)
 		return (0);
 	}
 	ttris = ft_read_file(av[1]);
+	ttristab = ft_split_tmino(ttris);
 	if (!ft_isvalid(ttris))
 	{
 		ft_putendl("error");

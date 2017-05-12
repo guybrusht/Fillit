@@ -53,3 +53,19 @@ char		**ft_split_tmino(char *ttris)
 	ttristab[tablen] = NULL;
 	return (ttristab);
 }
+
+void		ft_print_ttris(char **ttristab)
+{
+	int		i;
+
+	i = 0;
+	while (ttristab[i])
+	{
+		ft_putstr("Tmino #");
+		ft_putnbr(i + 1);
+		ft_putchar('\n');
+		ft_putendl(ttristab[i]);
+		ft_putchar('\n');
+		i++;
+	}
+}

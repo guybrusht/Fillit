@@ -94,13 +94,11 @@ int			ft_check_tmino(char *tmino)
 }
 // CA FOIRE A CAUSE DE LA BOUSE DE PMORRAIN LES TRUCS SONT PAS AU BON FORMAT
 
-int			ft_isvalid(char *ttris)
+int			ft_isvalid(char **ttristab)
 {
-	char	**ttristab;
 	int		i;
 
 	i = 0;
-	ttristab = ft_split_tmino(ttris);
 	while (ttristab[i] && ft_is_tetrimino(ft_convert_to_nb(ttristab[i])))
 		i++;
 	printf("piece correspond:%d\n tminos format:%d\n", i, ft_check_tab(ttristab));

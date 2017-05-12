@@ -24,5 +24,6 @@ int			ft_is_noncontiguous(int nb);
 int			ft_is_tetrimino(int nb);
 char		**ft_split_tmino(char *ttris);
 int			ft_check_ttris(char *ttris);
+void		ft_print_ttris(char **ttristab);
 
 #endif
