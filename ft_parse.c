@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:57:44 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/12 15:25:09 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/12 15:48:15 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,12 @@ int			ft_tetriminos_nb(char *ttris)
 	nb = 0;
 	while (ttris[i] != '\0')
 	{
-		if (ttris[i] == '\n' && (ttris[i + 1] == '\n' || ttris[i + 1] == '\0'))
+		if ((ttris[i] == '\n' && (ttris[i + 1] == '\n' || ttris[i + 1] == '\0')))
+		{	
+			if ((i - 19) % 21 != 0)
+				return (0);
 			nb++;
+		}
 		i++;
 	}
 	return (nb);

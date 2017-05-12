@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 11:10:51 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/12 15:20:16 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/12 15:43:47 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int			main(int ac, char **av)
 	char	*ttris;
 	int		tablen;
 
+	ttristab = NULL;
 	if (ac != 2)
 	{
 		ft_putendl("usage : ./fillit source_file");
@@ -25,7 +26,8 @@ int			main(int ac, char **av)
 	}
 	ttris = ft_read_file(av[1]);
 	tablen = ft_tetriminos_nb(ttris);
-	ttristab = ft_split_tmino(ttris, tablen);
+	if (tablen)
+		ttristab = ft_split_tmino(ttris, tablen);
 	if (ttristab == NULL || (!ft_is_valid(ttristab, tablen)))
 	{
 		ft_putendl("error");
