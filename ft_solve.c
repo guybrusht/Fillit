@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:58:07 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/12 15:02:32 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/15 12:58:54 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,14 @@ int		ft_is_noncontiguous(int nb)
 	}
 	printf("NBnoncontiguous: %d\n", nb);
 	return (non_contiguous);
+}
+
+int		ft_solve(char map[122], char **ttristab)
+{
+	return (0);
+}
+
+int		ft_place_tmino(char map[122], char *tmino)
+{
+	return (0);
 }

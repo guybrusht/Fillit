@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:32:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/12 14:36:58 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/15 12:59:47 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int			ft_is_tetrimino(int nb);
 char		**ft_split_tmino(char *ttris, int tablen);
 int			ft_check_ttris(char *ttris);
 void		ft_print_ttris(char **ttristab);
+int			ft_tmino_to_upperleft(char *tmino);
 
 #endif
