@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:32:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/15 17:18:05 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/16 14:17:02 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,11 @@ char			**ft_split_tmino(char *ttris, int tablen);
 int				ft_check_ttris(char *ttris);
 void			ft_print_ttris(char **ttristab);
 int				ft_tmino_to_upperleft(char *tmino);
-char			*ft_map(char **ttristab);
+char			*ft_init_map(char **ttristab);
 int				ft_is_free(char *map, int size, int pos, char *tmino);
-int				ft_fill(char *map, int size, char **ttristab);
+int				ft_algo(char *map, int size, int pos, char **ttristab, int i);
+void			ft_fill_map(char *map, int size, int pos, char *tmino,
+		int letter);
+void			ft_erase_letter(char *map, int size, int pos, char *tmino);
 
 #endif

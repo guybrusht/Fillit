@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 11:10:51 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/15 18:29:05 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/16 13:57:41 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int			main(int ac, char **av)
 	}
 	ft_print_ttris(ttristab);
 	ft_putendl("Map:");
-	printf("%s\n", ft_map(ttristab));
+	printf("%s\n", ft_init_map(ttristab));
 	return (0);
 }
