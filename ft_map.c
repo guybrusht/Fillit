@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 17:22:16 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/16 15:25:22 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/19 17:58:26 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char		*ft_init_map(char **ttristab)
 	pos = 0;
 	map = (char*)malloc(122 * sizeof(char));
 	ft_memset(map, '.', 122);
-	size = 12;
+	size = 11;
 	i = 0;
 	ft_algo(map, size, pos, ttristab, i);
 //	while (size < 12 && !ft_algo(map, size, pos, ttristab))
@@ -89,6 +89,32 @@ void		ft_erase_letter(char *map, int size, int pos, char *tmino)
 
 int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 {
+	int		total;
+
+	total = 0;
+	while (ttristab[total])
+		total++;
+	printf("TOTAL%d\n", total);
+	if (total == 1)
+		return (1);
+	while (ttristab[i])
+	{
+		ft_print_result(map);
+		if (ft_is_free(map, size, pos, ttristab[i]))
+		{
+			ft_fill_map(map, size, pos, ttristab[i], i);
+			if (ft_algo(map, size, pos++, &ttristab[i], i))
+				return (1);
+			ft_erase_letter(map, size, pos, ttristab[i]);
+		}
+		i++;
+	}
+	return (0);
+}
+
+/* OLD version. les pieces changent de forme.
+int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
+{
 	if (ttristab[i] != NULL)
 	{
 		while (!ft_is_free(map, size, pos, ttristab[i]))
@@ -106,48 +132,4 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 		}
 	}
 	return (1);
-}
-
-/*
-   int			ft_fill(char *map, int size, char **ttristab)
-   {
-   int		i;
-   int		j;
-   int		pos;
-   int		offset;
-   int		count;
-
-
-   i = 0;
-   while (ttristab[i])
-   {
-   pos = 0;
-   while (pos < size * size - 3)
-   {
-   printf("Pos = %d, Size = %d\n", pos, size);
-   if (ft_is_free(map, size, pos, ttristab[i]))
-   {
-   count = 0;
-   j = 0;
-   while (ttristab[i][j])
-   {
-   offset = (j / 5) * size + j % 5;
-   if (ttristab[i][j] == '#')
-   {
-   printf("i = %d; j = %d\n", i, j);
-   map[pos + offset] = ttristab[i][j];
-   count++;
-   }
-   j++;
-   if (count == 4)
-   return (1);
-   }
-//return (1);			
-//ft_fill(map, size, ttristab);
-}
-pos++;
-}
-i++;
-}
-return (0);
 }*/
