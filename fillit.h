@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:32:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/16 14:17:02 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/19 11:53:20 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int				ft_algo(char *map, int size, int pos, char **ttristab, int i);
 void			ft_fill_map(char *map, int size, int pos, char *tmino,
 		int letter);
 void			ft_erase_letter(char *map, int size, int pos, char *tmino);
+void			ft_print_result(char *map);
 
 #endif
