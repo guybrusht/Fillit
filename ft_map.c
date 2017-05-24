@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 17:22:16 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 17:51:37 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 18:49:24 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char		*ft_init_map(char **ttristab)
 	ft_memset(map, '.', 121);
 //	printf("Strlen pre0: %d\n" , strlen(map));
 //	printf("Strlen post0: %d\n" , strlen(map));
-	size = 2;
+	size = 4;
 	map[size * size] = '\0';
 	i = 0;
 //	ft_algo(map, size, pos, ttristab, i);
@@ -119,7 +119,7 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 */
 
 /* OLD version. les pieces changent de forme.*/
-int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
+/*int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 {
 	ft_print_result(map);
 	if (ttristab[i] != NULL)
@@ -138,6 +138,32 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 			pos++;
 			return (ft_algo(map, size, pos, &ttristab[i], i));
 		}
+	}
+	return (1);
+}*/
+
+
+int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
+{
+	ft_print_result(map);
+	if (ttristab[i] != NULL)
+	{
+		while (pos <= size * size - 3)
+		{
+			while (!ft_is_free(map, size, pos, ttristab[i]))
+			{
+				pos++;
+				if (pos > size * size - 3)
+					return (0);
+			}
+			ft_fill_map(map, size, pos, ttristab[i], i);
+			if (ft_algo(map, size, 0, ttristab, i + 1))
+				return (1);
+			else
+				ft_erase_letter(map, size, pos, ttristab[i]);
+			pos++;
+		}
+		return (0);
 	}
 	return (1);
 }
