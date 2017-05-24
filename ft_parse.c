@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:57:44 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/12 15:48:15 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/15 16:48:17 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ char		**ft_split_tmino(char *ttris, int tablen)
 			ttristab[i] = ft_strsub(ttris, 0, last - ttris - 1);
 		ttris = address + 2;
 		i++;
-	printf("i split: %d\n", i);
 	}
 	ttristab[tablen] = NULL;
-	printf("i split: %d\n", i);
 	return (ttristab);
 }
 

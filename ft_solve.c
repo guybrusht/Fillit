@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:58:07 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/15 12:58:54 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/15 17:34:31 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int			ft_convert_to_nb(char *ttris)
 			nb++;
 		i++;
 	}
-	printf("NB: %d\n", nb);
 	return (nb);
 }
 
@@ -52,7 +51,6 @@ int			ft_simplify_tmino(int nb)
 	{
 		nb /= 2;
 	}
-	printf("NBsimplified: %d\n", nb);
 	return (nb);
 }
 
@@ -69,7 +67,6 @@ int		ft_is_noncontiguous(int nb)
 			non_contiguous = 1;
 		tmp = tmp >> 4;
 	}
-	printf("NBnoncontiguous: %d\n", nb);
 	return (non_contiguous);
 }
 

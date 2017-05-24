@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 11:10:51 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/12 15:43:47 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/19 11:53:30 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int			main(int ac, char **av)
 		return (0);
 	}
 	ft_print_ttris(ttristab);
-	ft_putendl("Valid file:");
-	//	ft_solve(ttris);
+	ft_putendl("Map:");
+	ft_print_result(ft_init_map(ttristab));
 	return (0);
 }
