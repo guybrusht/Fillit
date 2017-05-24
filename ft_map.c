@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 17:22:16 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/19 17:58:26 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/24 16:51:46 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ char		*ft_init_map(char **ttristab)
 
 	pos = 0;
 	map = (char*)malloc(122 * sizeof(char));
-	ft_memset(map, '.', 122);
+	ft_memset(map, '.', 121);
+//	printf("Strlen pre0: %d\n" , strlen(map));
+	map[121] = '\0';
+//	printf("Strlen post0: %d\n" , strlen(map));
 	size = 11;
 	i = 0;
 	ft_algo(map, size, pos, ttristab, i);
@@ -86,7 +89,7 @@ void		ft_erase_letter(char *map, int size, int pos, char *tmino)
 		i++;
 	}
 }
-
+/*
 int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 {
 	int		total;
@@ -111,8 +114,9 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 	}
 	return (0);
 }
+*/
 
-/* OLD version. les pieces changent de forme.
+/* OLD version. les pieces changent de forme.*/
 int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 {
 	if (ttristab[i] != NULL)
@@ -123,8 +127,9 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 			if (pos > size * size - 3)
 				return (0);
 		}
+		ft_print_result(map);
 		ft_fill_map(map, size, pos, ttristab[i], i);
-		if (!ft_algo(map, size, pos, &ttristab[i + 1], i + 1))
+		if (!ft_algo(map, size, pos, ttristab, i + 1))
 		{
 			ft_erase_letter(map, size, pos, ttristab[i]);
 			pos++;
@@ -132,4 +137,4 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 		}
 	}
 	return (1);
-}*/
+}
