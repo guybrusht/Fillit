@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:56:20 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/24 19:40:57 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 20:43:38 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ void		ft_print_result(char *map)
 		ft_putchar(map[i]);
 		i++;
 	}
-	ft_putchar('\n');
+//	ft_putchar('\n');
 }

@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 11:10:51 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 19:39:27 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 20:40:36 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int			main(int ac, char **av)
 	if (ac != 2)
 	{
 		ft_putendl(TITLE);
-		ft_putendl("usage : ./fillit source_file");
+		ft_putendl("     usage : ./fillit source_file");
 		return (0);
 	}
 	ttris = ft_read_file(av[1]);

@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:57:44 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/15 16:48:17 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/24 20:16:11 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,22 @@ int			ft_tetriminos_nb(char *ttris)
 		i++;
 	}
 	return (nb);
+}
+
+int			ft_delall(char **ttristab)
+{
+	int		i;
+
+	i = 0;
+	if (ttristab == NULL)
+		return (0);
+	while (ttristab[i])
+	{
+		free(ttristab[i]);
+		ttristab[i] = NULL;
+		i++;
+	}
+	free(ttristab);
+	ttristab = NULL;
+	return (0);
 }
