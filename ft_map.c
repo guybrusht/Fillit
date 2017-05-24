@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 17:22:16 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 19:20:53 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 19:41:59 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 
 int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 {
-	ft_print_result(map);
+	//ft_print_result(map);
 	if (ttristab[i] != NULL)
 	{
 		while (pos <= size * size - 3)

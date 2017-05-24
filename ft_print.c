@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:56:20 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/24 17:45:29 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 19:40:57 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		ft_print_result(char *map)
 		len++;
 //	printf("Strlen:\t%d\n", len);
 	sqrtlen = ft_sqrt(len);
-	printf("Mapsize:\t%d\n", sqrtlen);
+//	printf("Mapsize:\t%d\n", sqrtlen);
 	while (map[i])
 	{
 		if (i % sqrtlen == 0 && i != 0)
