@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 17:22:16 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 16:51:46 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 17:51:37 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@ char		*ft_init_map(char **ttristab)
 	map = (char*)malloc(122 * sizeof(char));
 	ft_memset(map, '.', 121);
 //	printf("Strlen pre0: %d\n" , strlen(map));
-	map[121] = '\0';
 //	printf("Strlen post0: %d\n" , strlen(map));
-	size = 11;
+	size = 2;
+	map[size * size] = '\0';
 	i = 0;
-	ft_algo(map, size, pos, ttristab, i);
-//	while (size < 12 && !ft_algo(map, size, pos, ttristab))
-//	{
-	
-//	//	ft_memset(map, '.', 122);
-//		size++;
-//	}
+//	ft_algo(map, size, pos, ttristab, i);
+	while (size < 12 && !ft_algo(map, size, pos, ttristab, 0))
+	{
+		size++;
+		ft_memset(map, '.', size * size);
+		map[size * size] = '\0';
+	}
 	return (map);	
 }
 
@@ -48,8 +48,10 @@ int			ft_is_free(char *map, int size, int pos, char *tmino)
 	while (tmino[i])
 	{
 		offset = (i / 5) * size + i % 5;
-		if (tmino[i] == '#' && (ft_isupper(map[pos + offset]) ||
-					(pos % size + offset % size > size) || (pos + offset >= size * size)))
+		if (tmino[i] == '#' && (ft_isupper(map[pos + offset])
+					|| (pos % size + offset % size >= size)
+					|| (pos + offset >= size * size)))
+				//	|| (pos % size + i > size)))
 /*		if (tmino[i] == '#' && (ft_isupper(map[pos + offset]) ||
 					(pos % size + offset > size) || (pos + offset < size * size)))*/
 			return (0);
@@ -119,6 +121,7 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 /* OLD version. les pieces changent de forme.*/
 int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 {
+	ft_print_result(map);
 	if (ttristab[i] != NULL)
 	{
 		while (!ft_is_free(map, size, pos, ttristab[i]))
@@ -127,9 +130,9 @@ int			ft_algo(char *map, int size, int pos, char **ttristab, int i)
 			if (pos > size * size - 3)
 				return (0);
 		}
-		ft_print_result(map);
 		ft_fill_map(map, size, pos, ttristab[i], i);
-		if (!ft_algo(map, size, pos, ttristab, i + 1))
+		//if (!ft_algo(map, size, pos, ttristab, i + 1))
+		if (!ft_algo(map, size, 0, ttristab, i + 1))
 		{
 			ft_erase_letter(map, size, pos, ttristab[i]);
 			pos++;
