@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 17:22:16 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 18:49:24 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 19:20:53 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char		*ft_init_map(char **ttristab)
 	ft_memset(map, '.', 121);
 //	printf("Strlen pre0: %d\n" , strlen(map));
 //	printf("Strlen post0: %d\n" , strlen(map));
-	size = 4;
+	size = ft_uppersqrt(4 * ft_nb_tminos(ttristab));
 	map[size * size] = '\0';
 	i = 0;
 //	ft_algo(map, size, pos, ttristab, i);

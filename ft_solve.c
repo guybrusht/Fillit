@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:58:07 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/15 17:34:31 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/24 19:21:13 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,12 +70,30 @@ int		ft_is_noncontiguous(int nb)
 	return (non_contiguous);
 }
 
-int		ft_solve(char map[122], char **ttristab)
+int		ft_nb_tminos(char **ttristab)
 {
-	return (0);
+	int i;
+
+	i = 0;
+	if (ttristab == NULL)
+		return (0);
+	else
+		while (ttristab[i])
+			i++;
+	return (i);
 }
 
-int		ft_place_tmino(char map[122], char *tmino)
+int		ft_uppersqrt(int nb)
 {
-	return (0);
+	int i;
+
+	i = 0;
+	if (nb < 0)
+		return (0);
+	while (i * i < nb && i <= 46340)
+	i = i + 1;
+	if (i * i >= nb)
+		return (i);
+	else
+		return (0);
 }
