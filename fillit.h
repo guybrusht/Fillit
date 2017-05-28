@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:32:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/19 11:53:20 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/24 20:39:38 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include "libft/libft.h"
 # include "shapes.h"
 # include <stdio.h>
+
+# define TITLE "\n         _.._\n       .' .._| .--..--.      .|\n       | ' .--.|  ||  |.--..' |_\n     __| |_|__||  ||  ||__|     |\n    |__   __|  |  ||  | '--.  .-'\n       | | .--.|  ||  |.--.|  |\n       | | |  ||  ||  ||  ||  |\n       | | |  ||  ||  ||  ||  ‘.’\n       | | |  ||  ||  ||  ||   /\n       |_| |__||  ||  ||__|`'-'\n               '--''--'\n"
+
+
+# define TITLE2 "\n                 .---..---.              \n             .--.|   ||   |.--.          \n        _.._ |__||   ||   ||__|          \n      .' .._|.--.|   ||   |.--.     .|   \n      | '    |  ||   ||   ||  |   .' |_  \n    __| |__  |  ||   ||   ||  | .'     | \n   |__   __| |  ||   ||   ||  |'--.  .-' \n      | |    |  ||   ||   ||  |   |  |   \n      | |    |__||   ||   ||__|   |  |   \n      | |        '---''---'       |  '.' \n      | |                         |   /  \n      |_|                         `'-'   \n"
+
 
 int				ft_convert_to_nb(char *tab);
 char			*ft_read_file(char *av);
@@ -35,5 +41,8 @@ void			ft_fill_map(char *map, int size, int pos, char *tmino,
 		int letter);
 void			ft_erase_letter(char *map, int size, int pos, char *tmino);
 void			ft_print_result(char *map);
+int				ft_nb_tminos(char **ttristab);
+int				ft_uppersqrt(int nb);
+int				ft_delall(char **ttristab);
 
 #endif

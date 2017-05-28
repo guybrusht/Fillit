@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:57:01 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/15 13:08:16 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/24 19:43:59 by pmorrain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int			ft_is_valid(char **ttristab, int tablen)
 	return (0);
 }
 
-int		ft_is_tetrimino(int nb)
+int			ft_is_tetrimino(int nb)
 {
 	int		s;
 
@@ -82,7 +82,7 @@ int		ft_is_tetrimino(int nb)
 		return (0);
 }
 
-int ft_tmino_to_upperleft(char *tmino)
+int			ft_tmino_to_upperleft(char *tmino)
 {
 	int		s;
 
