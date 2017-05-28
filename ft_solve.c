@@ -6,17 +6,17 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:58:07 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/24 19:21:13 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/28 17:10:01 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int			ft_convert_to_nb(char *ttris)
+int		ft_convert_to_nb(char *ttris)
 {
-	int		nb;
-	int		i;
-	int		j;
+	int	nb;
+	int	i;
+	int	j;
 
 	i = 0;
 	nb = 0;
@@ -35,7 +35,7 @@ int			ft_convert_to_nb(char *ttris)
 	return (nb);
 }
 
-int			ft_simplify_tmino(int nb)
+int		ft_simplify_tmino(int nb)
 {
 	if (nb == 0)
 		return (0);
@@ -91,7 +91,7 @@ int		ft_uppersqrt(int nb)
 	if (nb < 0)
 		return (0);
 	while (i * i < nb && i <= 46340)
-	i = i + 1;
+		i = i + 1;
 	if (i * i >= nb)
 		return (i);
 	else
