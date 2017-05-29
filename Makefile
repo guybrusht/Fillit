@@ -6,7 +6,7 @@
 #    By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/28 17:44:48 by alalaoui          #+#    #+#              #
-#    Updated: 2017/05/29 15:13:07 by alalaoui         ###   ########.fr        #
+#    Updated: 2017/05/29 15:18:13 by alalaoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ all : $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) $(SRC) -c 
-	gcc -o $(NAME) libft.a $(OBJ)
+	gcc -o $(NAME) $(LIB) $(OBJ)
 
 clean:
 	rm -f $(OBJ)
