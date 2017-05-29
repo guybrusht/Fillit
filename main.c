@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 11:10:51 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 20:40:36 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/28 17:07:58 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,6 @@ int			main(int ac, char **av)
 		ft_putendl("error");
 		return (0);
 	}
-	//ft_putendl("Input file OK, valid tminos");
-	//ft_print_ttris(ttristab);
-	//ft_putendl("Map:");
 	ft_print_result(ft_init_map(ttristab));
 	return (0);
 }

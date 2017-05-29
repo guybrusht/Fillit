@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/11 13:32:27 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 20:02:14 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/28 17:07:46 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define N_T180 39
 # define S_T180 ".#..\n###.\n....\n...."
 # define N_T270 562
-# define S_T270 "#...\n##...\n#...\n...."
+# define S_T270 "#...\n##..\n#...\n...."
 
 # define N_L0 547
 # define S_L0 "#...\n#...\n##..\n...."
@@ -41,7 +41,7 @@
 
 # define N_SYM_L0 275
 # define S_SYM_L0 ".#..\n.#..\n##..\n...."
-# define N_SYM_L90 71 
+# define N_SYM_L90 71
 # define S_SYM_L90 "#...\n###.\n....\n...."
 # define N_SYM_L180 802
 # define S_SYM_L180 "##..\n#...\n#...\n...."

@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:55:49 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/12 13:57:29 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/28 17:40:19 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 char		*ft_read_file(char *desc)
 {
-	int		ret;
-	int		fd;
+	int			ret;
+	int			fd;
 	static char	buf[545];
 
 	if ((fd = open(desc, O_RDONLY)) == -1)
@@ -32,5 +32,6 @@ char		*ft_read_file(char *desc)
 	}
 	ret = read(fd, buf, 545);
 	buf[ret] = '\0';
+	close(fd);
 	return (buf);
 }

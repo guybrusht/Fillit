@@ -6,7 +6,7 @@
 /*   By: alalaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 18:32:50 by alalaoui          #+#    #+#             */
-/*   Updated: 2017/05/24 20:39:38 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/28 18:27:45 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ void			ft_print_ttris(char **ttristab);
 int				ft_tmino_to_upperleft(char *tmino);
 char			*ft_init_map(char **ttristab);
 int				ft_is_free(char *map, int size, int pos, char *tmino);
-int				ft_algo(char *map, int size, int pos, char **ttristab, int i);
-void			ft_fill_map(char *map, int size, int pos, char *tmino,
-		int letter);
+int				ft_algo(char *map, int size, int pos, char **ttristab);
+void			ft_fill_map(char *map, int pos, char *tmino, int letter);
 void			ft_erase_letter(char *map, int size, int pos, char *tmino);
 void			ft_print_result(char *map);
 int				ft_nb_tminos(char **ttristab);
 int				ft_uppersqrt(int nb);
 int				ft_delall(char **ttristab);
+int				ft_map_size(char *map);
 
 #endif

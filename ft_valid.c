@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:57:01 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/24 19:43:59 by pmorrain         ###   ########.fr       */
+/*   Updated: 2017/05/28 17:08:38 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int			ft_is_tetrimino(int nb)
 			|| s == N_T90 || s == N_T180 || s == N_T270 || s == N_L0
 			|| s == N_L90 || s == N_L180 || s == N_L270 || s == N_SYM_L0
 			|| s == N_SYM_L90 || s == N_SYM_L180 || s == N_SYM_L270
-			|| s ==  N_S0 || s == N_S90 || s == N_Z0 || s == N_Z90)
+			|| s == N_S0 || s == N_S90 || s == N_Z0 || s == N_Z90)
 		return (s);
 	else
 		return (0);
