@@ -6,7 +6,7 @@
 /*   By: pmorrain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 13:55:49 by pmorrain          #+#    #+#             */
-/*   Updated: 2017/05/28 17:40:19 by alalaoui         ###   ########.fr       */
+/*   Updated: 2017/05/29 14:49:07 by alalaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ char		*ft_read_file(char *desc)
 
 	if ((fd = open(desc, O_RDONLY)) == -1)
 	{
-		ft_putendl("error : File didn't open");
-		return (0);
+		ft_putendl("error : File couldn't open");
+		exit (0);
 	}
 	ret = read(fd, buf, 545);
 	buf[ret] = '\0';
